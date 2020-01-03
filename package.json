@@ -6,13 +6,16 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
+    "start": "node server.js",
+    "export": "next export",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "koa": "^2.11.0",
+    "koa-router": "^7.4.0",
     "next": "^9.1.6",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
