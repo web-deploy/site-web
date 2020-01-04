@@ -7,14 +7,14 @@ module.exports = {
         "interpreter": "",                          // 指定的脚本解释器
         "interpreter_args": "",                     // 传递给解释器的参数
         "watch": [
-            'dist'                                  // 监控变化的目录，一旦变化，自动重启
+            'src'                                  // 监控变化的目录，一旦变化，自动重启
           ],                                        // 是否监听文件变动然后重启
         "ignore_watch": [                           // 不用监听的文件
             "node_modules",
             "logs"
         ],
         "exec_mode": "cluster_mode",                // 应用启动模式，支持fork和cluster模式
-        "instances": 2,                             // 应用启动实例个数，仅在cluster模式有效 默认为fork；或者 max
+        "instances": 1,                             // 应用启动实例个数，仅在cluster模式有效 默认为fork；或者 max
         "max_memory_restart": 8,                    // 最大内存限制数，超出自动重启
         "error_file": "./logs/err.log",         // 错误日志文件
         "out_file": "./logs/out.log",           // 正常日志文件
