@@ -44,7 +44,8 @@ module.exports = {
           ref  : 'origin/master',
           repo : 'git@github.com:web-deploy/site-web.git',
           path : '/var/www/site/site-web',
-          'post-deploy' : 'git pull && npm install && npm run build && pm2 reload ecosystem.config.js --env production'
+          'pre-deploy': 'git fetch --all && git pull',  // 部署前执行
+          'post-deploy' : 'npm install && npm run build && pm2 reload ecosystem.config.js --env production'
         }
       }
 }
