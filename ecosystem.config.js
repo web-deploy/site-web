@@ -36,5 +36,15 @@ module.exports = {
             "NODE_ENV": "test",
             "REMOTE_ADDR": ""
         }
-    }
+    },
+    deploy : {
+        production : {
+          user : 'root',
+          host : '106.13.110.53',
+          ref  : 'origin/master',
+          repo : 'git@github.com:web-deploy/site-web.git',
+          path : '/var/www/site/site-web',
+          'post-deploy' : 'git pull && npm install && npm run build && pm2 reload ecosystem.config.js --env production'
+        }
+      }
 }
