@@ -1,0 +1,41 @@
+.app-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  background-color: #ddd;
+
+  >div {
+    display: flex;
+  }
+
+  .user-info {
+    margin-top: 5em;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .avatar {
+      max-width: 75px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      border-radius: 100%;
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.5), 0px 2px 20px 3px rgba(0,0,0,0.25);
+    }
+
+    .name {
+      margin-top: .75em;
+      font-size: 2rem;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .name-en {
+      font-size: 1.8rem;
+      margin-top: .375em;
+      color: rgba(255,255,255,0.7);
+    }
+  }
+
+
+}
