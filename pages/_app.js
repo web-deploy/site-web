@@ -33,6 +33,10 @@ export default class App extends NextApp {
             padding: 0;
           }
 
+          div {
+            display: flex;
+          }
+
           #__next {
             display: flex;
             width: 100%;

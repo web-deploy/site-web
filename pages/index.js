@@ -1,18 +1,23 @@
 import React from 'react';
 import axios from '../utils/axios';
 
+import './index.less';
+
 const Index = ({ articles }) => {
-  console.log(articles);
   return (
-    <div>
-      <div>首页</div>
-      <div>
+    <div className="home">
+      <div className="article-wrap">
         {
-          articles.map(({ title, desc }, index) => {
+          articles.map(({ title, content, poster }, index) => {
             return (
-              <div key={index}>
-                <div>{title}</div>
-                <div>{desc}</div>
+              <div className="article-item" key={index}>
+                <div className="article-content-wrap">
+                  <div>{title}</div>
+                  <div>{content}</div>
+                </div>
+                <div className="poster">
+                  <img src={poster} />
+                </div>
               </div>
             )
           })
