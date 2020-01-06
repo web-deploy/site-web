@@ -1,9 +1,23 @@
 import React from 'react';
 import NextApp, { Container } from 'next/app';
 import AppLeft from '../components/AppLeft';
+import axios from '../utils/axios';
 
 
 export default class App extends NextApp {
+
+  // static getInitialProps = async ({ req }) => {
+  //   const res = await axios.get('/user');
+  //   // console.log(res.data);
+  //   return { }
+  // }
+
+  // static async getInitialProps({ req }) {
+  //   const res = await axios.get('/user');
+  //   console.log(res.data);
+  //   return { }
+  // }
+
   render() {
     const { Component, pageProps } = this.props;
     return (
