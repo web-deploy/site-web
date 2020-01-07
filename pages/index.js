@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from '../utils/axios';
+import { convertTime } from '../utils';
 
 import './index.less';
 
@@ -8,16 +9,19 @@ const Index = ({ articles }) => {
     <div className="home">
       <div className="article-wrap">
         {
-          articles.map(({ title, content, poster }, index) => {
+          articles.map(({ title, description, poster, created_at: createdAt }, index) => {
             return (
               <div className="article-item" key={index}>
-                <div className="article-content-wrap">
-                  <div>{title}</div>
-                  <div>{content}</div>
+                <div>
+                  <div className="article-content-wrap">
+                    <div className="title">{title}</div>
+                    <div className="description">{description}</div>
+                  </div>
+                  <div className="poster">
+                    <img src={poster} />
+                  </div>
                 </div>
-                <div className="poster">
-                  <img src={poster} />
-                </div>
+                <div className="publish-date">{convertTime(createdAt)}</div>
               </div>
             )
           })

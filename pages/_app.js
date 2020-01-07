@@ -45,6 +45,7 @@ export default class App extends NextApp {
 
           .main {
             flex: 2;
+            padding: 50px;
           }
         `}</style>
         <AppLeft />

@@ -3,7 +3,7 @@ const os = require('os')
 module.exports = {
     getIPAdress: () => {
         const interfaces = os.networkInterfaces();
-    
+
         for (let devName in interfaces) {
             const iface = interfaces[devName];
             for (let i = 0; i < iface.length; i++) {
@@ -13,5 +13,14 @@ module.exports = {
             }
             }
         }
+    },
+    convertTime: (millisecond) => {
+      const date  = new Date(millisecond);
+      const y = date.getFullYear();
+      let m = date.getMonth() + 1;
+      let d = date.getDate();
+      m = m < 10 ? ('0' + m) : m;
+      d = d < 10 ? ('0' + d) : d;
+      return y + '-' + m + '-' + d;
     }
 }
