@@ -1,5 +1,6 @@
 import React from 'react';
 import NextApp, { Container } from 'next/app';
+import 'antd/dist/antd.css'
 import AppLeft from '../components/AppLeft';
 import axios from '../utils/axios';
 
