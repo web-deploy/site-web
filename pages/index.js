@@ -14,7 +14,7 @@ const Index = ({ articles }) => {
   const getArticleList = async () => {
     setLoading(true);
     const res = await axios.get('/article');
-    setArticleList(articleList.concat(res.data.data))
+    setArticleList(articleList.concat(res))
     setLoading(false);
   }
 
@@ -69,7 +69,7 @@ const Index = ({ articles }) => {
 
 Index.getInitialProps = async ({ req }) => {
   const res = await axios.get('/article');
-  return { articles: res.data.data }
+  return { articles: res }
 }
 
 export default Index;
